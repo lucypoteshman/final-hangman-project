@@ -1,25 +1,24 @@
-# shotgun -o 0.0.0.0 -p 3000
+<!-- rackup -o 0.0.0.0 -p 3000 -->
 
 <!doctype html>
 <html>
   <head>
     <title>HANGMAN</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Bevan" />
   </head>
   
   <body>
-    <h1> HANGMAN </h1>
-    <h2> By Lucy Poteshman and Sarah Cheng </h2>
-        
-    <br>
-    <br>
+    <div class="container" id="hangman">
+      <h1> HANGMAN </h1>
+      <h4> Welcome to Lucy Poteshman and Sarah Cheng's Game! </h4>
+      <br>
 
-    <h3>Welcome</ h3>
-
-    <form method="post" action="/input">
-      <label>Type your word here:</label>
-      <input type="text" name="word">
-      <input type="submit">
-    </form>
-
+      <form method="post" action="/input">
+        <label>Type your word here:</label>
+        <input type="text" name="word">
+        <input type="submit">
+      </form>
+    </div>
   </body>
 </html>

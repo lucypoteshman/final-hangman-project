@@ -1,0 +1,25 @@
+body {
+background: #30D5C8; 
+}
+
+.container {
+    position: absolute;
+    height: 450px;
+    width: 750px;
+    left: 50%;
+    top: 50%;
+    margin-top: -225px; 
+    margin-left: -375px;
+    background: #30D5C8; 
+    text-align: center;
+  font-size: 1.2em;
+    font-family: Ewert;
+    color: white;
+    
+}
+  
+#hangman {
+    font: 400 3.5em/125% 'Ewert', serif;
+}
+
+

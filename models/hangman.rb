@@ -1,14 +1,14 @@
 class Hangman
   
-  attr_accessor :letters
-  attr_reader :word
+  attr_accessor :letters, :word
   
-  def initialize(word)
-    @word = word 
+  def initialize
+    @word = "" 
     @letters = []
-    @num_of_guesses = 0
+    @wrong_guesses = 0
   end
   
+
   def print_progress
     character_array = @word.split("")
     final_array = []
@@ -19,13 +19,40 @@ class Hangman
         final_array << "_"
       end
     end
-    return final_array.join("")
+    return final_array.join(" ")
   end
   
   def guess(letter)
     @letters << letter
-    @num_of_guesses += 1
+    if @word.include?(letter)
+       @wrong_guesses += 0
+      return "Correct guess!"
+    else 
+      @wrong_guesses += 1
+      return 'Wrong guess. <img src = "http://free.clipartof.com/85-Free-3D-Stressed-Smiley-Face-Clipart-Illustration.png"height=200 />'
+    end
   end
   
+  def game_over
+    if @wrong_guesses > 6
+      return "Game Over."
+    else
+      return "Try Again."
+    end
+  end
+  
+  def result
+    print_progress.gsub(" ", "")
+  end
+  
+
+  
+  def check
+    if result == @word
+     return "You win!" 
+    else
+      return "Guess Another Letter"
+    end
+  end
 end
 
